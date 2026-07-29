@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
 import { Counter } from "./components/counter/Counter";
+import Greeting from "@/app/components/react-with-typescript/Greeting";
+import SimpleCounter from "@/app/components/react-with-typescript/SimpleCounter";
+import CounterWithReducer from "@/app/components/react-with-typescript/reducer/CounterWithReducer";
+import ContextDemo1 from "@/app/components/react-with-typescript/context/ContextDemo1";
+import ContextDemo from "@/app/components/react-with-typescript/context/ContextDemo";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (<div>
+    {/*<Counter />*/}
+    
+    {/*<Greeting message={"Hello"}/>*/}
+    
+    {/*<SimpleCounter/>*/}
+    
+    {/*<CounterWithReducer/>*/}
+    
+    {/*<ContextDemo1/>*/}
+    
+    <ContextDemo/>
+  </div>);
 }
 
 export const metadata: Metadata = {

@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "tc": "tsc --noEmit"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.0",
