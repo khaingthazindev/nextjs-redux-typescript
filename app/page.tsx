@@ -5,6 +5,7 @@ import SimpleCounter from "@/app/components/react-with-typescript/SimpleCounter"
 import CounterWithReducer from "@/app/components/react-with-typescript/reducer/CounterWithReducer";
 import ContextDemo1 from "@/app/components/react-with-typescript/context/ContextDemo1";
 import ContextDemo from "@/app/components/react-with-typescript/context/ContextDemo";
+import TodoWithReducer from "@/app/components/react-with-typescript/reducer/TodoWithReducer";
 
 export default function IndexPage() {
   return (<div>
@@ -18,7 +19,9 @@ export default function IndexPage() {
     
     {/*<ContextDemo1/>*/}
     
-    <ContextDemo/>
+    {/*<ContextDemo/>*/}
+    
+    <TodoWithReducer/>
   </div>);
 }
 
