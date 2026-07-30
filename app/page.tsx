@@ -6,6 +6,7 @@ import CounterWithReducer from "@/app/components/react-with-typescript/reducer/C
 import ContextDemo1 from "@/app/components/react-with-typescript/context/ContextDemo1";
 import ContextDemo from "@/app/components/react-with-typescript/context/ContextDemo";
 import TodoWithReducer from "@/app/components/react-with-typescript/reducer/TodoWithReducer";
+import TodoListWithReduxDemo from "@/app/components/todo/TodoListWithReduxDemo";
 
 export default function IndexPage() {
   return (<div>
@@ -21,7 +22,9 @@ export default function IndexPage() {
     
     {/*<ContextDemo/>*/}
     
-    <TodoWithReducer/>
+    {/*<TodoWithReducer/>*/}
+    
+    <TodoListWithReduxDemo/>
   </div>);
 }
 
