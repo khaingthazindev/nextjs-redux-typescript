@@ -16,7 +16,7 @@ export default function InitialPostWithRedux() {
   const handleAddInitialPost = () => {
     dispatch(addInitialPost(post));
   }
-  return (<div>
-    <Button variant="contained" onClick={handleAddInitialPost}>Add Initial Post</Button>
+  return (<div style={{marginTop: "20px", marginBottom: "20px"}}>
+    <Button variant="contained" color={"success"} onClick={handleAddInitialPost}>Add Initial Post</Button>
   </div>)
 }
