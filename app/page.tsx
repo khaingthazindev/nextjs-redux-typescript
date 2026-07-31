@@ -7,6 +7,7 @@ import ContextDemo1 from "@/app/components/react-with-typescript/context/Context
 import ContextDemo from "@/app/components/react-with-typescript/context/ContextDemo";
 import TodoWithReducer from "@/app/components/react-with-typescript/reducer/TodoWithReducer";
 import TodoListWithReduxDemo from "@/app/components/todo/TodoListWithReduxDemo";
+import PostListWithReduxDemo from "@/app/components/post/PostListWithReduxDemo";
 
 export default function IndexPage() {
   return (<div>
@@ -24,7 +25,9 @@ export default function IndexPage() {
     
     {/*<TodoWithReducer/>*/}
     
-    <TodoListWithReduxDemo/>
+    {/*<TodoListWithReduxDemo/>*/}
+    
+    <PostListWithReduxDemo/>
   </div>);
 }
 

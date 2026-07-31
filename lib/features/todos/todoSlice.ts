@@ -7,22 +7,32 @@ export interface TodoSliceState {
 }
 
 const initialState: TodoSliceState = {
-  todos: [
-    {
-      id: '1',
-      title: 'Todo 1'
-    },
-    {
-      id: '2',
-      title: 'Todo 2'
-    },
-  ]
+  todos: []
 };
 
 export const todoSlice = createAppSlice({
   name: 'todos',
   initialState,
   reducers: (create) => ({
+    loadAllTodo: create.asyncThunk(
+      async () => {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+        const json: TodoModel[] = await response.json();
+        return json;
+      },
+      {
+        pending: (state) => {
+          console.log('Fetch todo pending');
+        },
+        fulfilled: (state, action) => {
+          console.log('Fetch todo fulfilled');
+          state.todos = action.payload;
+        },
+        rejected: (state) => {
+          console.log('Fetch todo rejected');
+        },
+      }
+    ),
     addTodo: create.reducer((state, action: PayloadAction<TodoModel>) => {
       state.todos.push(action.payload);
     }),
@@ -35,9 +45,10 @@ export const todoSlice = createAppSlice({
   }),
   selectors: {
     selectTodos: (state) => state.todos,
+    selectTodoCount: (state) => state.todos.length,
   },
 });
 
-export const { addTodo, deleteTodo, updateTodo } =
+export const { loadAllTodo, addTodo, deleteTodo, updateTodo } =
   todoSlice.actions;
-export const { selectTodos } = todoSlice.selectors;
+export const { selectTodos, selectTodoCount } = todoSlice.selectors;

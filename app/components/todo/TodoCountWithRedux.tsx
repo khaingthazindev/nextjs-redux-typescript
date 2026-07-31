@@ -1,9 +1,9 @@
 import {useAppSelector} from "@/lib/hooks";
-import {selectTodos} from "@/lib/features/todos/todoSlice";
+import {selectTodoCount, selectTodos} from "@/lib/features/todos/todoSlice";
 
 export default function TodoCountWithRedux() {
-  const todos = useAppSelector(selectTodos);
+  const count = useAppSelector(selectTodoCount);
   return (<div>
-    Count: {todos.length}
+    Count: {count}
   </div>)
 }
