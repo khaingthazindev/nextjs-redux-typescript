@@ -2,7 +2,6 @@
 
 import TodoList from "@/app/todos-rtkquery/components/TodoList";
 import { useGetTodosQuery} from "@/lib/features/todoApi/todoApiSlice";
-import styles from "@/app/components/quotes/Quotes.module.css";
 import { Button } from "@mui/material";
 import TodoEntry from "@/app/todos-rtkquery/components/TodoEntry";
 

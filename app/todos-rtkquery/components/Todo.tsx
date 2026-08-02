@@ -1,7 +1,7 @@
 import {Button, Card, CardContent} from "@mui/material";
-import {useDispatch} from "react-redux";
 import {TodoScheme, useDeleteTodoMutation, useUpdateTodoMutation} from "@/lib/features/todoApi/todoApiSlice";
 import {useRouter} from "next/navigation";
+import styles from "@/app/todos-rtkquery/todos-rtkquery.module.css";
 
 interface TodoProps {
   todo: TodoScheme;
@@ -35,7 +35,7 @@ export default function Todo({todo}: TodoProps) {
   return (<div>
     <Card sx={{minWidth: 275}}>
       <CardContent>
-        {todo.title}
+        <span className={styles.todo}>{todo.title}</span>
         &nbsp;<Button variant={"contained"} onClick={handleEdit}>Edit</Button>
         &nbsp;<Button variant={"contained"} onClick={() => handleDelete(todo)}>Delete</Button>
         &nbsp;<Button variant={"contained"} onClick={() => handleDetail(todo._id as string)}>Detail</Button>
