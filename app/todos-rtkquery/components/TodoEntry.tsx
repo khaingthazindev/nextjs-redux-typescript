@@ -19,8 +19,12 @@ export default function TodoEntry() {
       title: task,
       completed: false
     };
-    const saveResult = saveTodo(newTodo);
-    console.log('saveResult: ', saveResult);
+    saveTodo(newTodo)
+      .then((data) => {
+        console.log('saveTodo success: ', data);
+      }, (error) => {
+        console.log('saveTodo error: ', error)
+      });
     
     setTask("");
   }

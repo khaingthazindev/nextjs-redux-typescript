@@ -6,10 +6,9 @@ interface TodoListProps {
 }
 
 export default function TodoList({todos}: TodoListProps) {
-  console.log('TodoList');
   return (<div>
     {
-      todos.map(todo => <Todo key={todo._id} todo={todo}/>)
+      todos.map((todo) => <Todo key={todo._id} todo={todo}/>)
     }
   </div>)
 }
